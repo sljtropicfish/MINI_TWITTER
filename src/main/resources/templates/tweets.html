@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{Layout}">
+<head>
+    <title>Tweets</title>
+</head>
+<body>
+<section layout:fragment="content">
+    <p><span th:text="${userInfo}">All tweets</span></p>
+    <table>
+        <tr>
+            <th>User Name</th>
+            <th>Tweet</th>
+            <th>Created Time</th>
+            <th>Last Modified Time</th>
+        </tr>
+        <tr th:each="tweet:${tweets}">
+            <td th:text="${tweet.user.firstName + ' ' + tweet.user.lastName}"></td></td>
+            <td th:text="${tweet.tweet.content}"></td>
+            <td th:text="${tweet.tweet.createdAt}"></td>
+            <td th:text="${tweet.tweet.updateAt}"></td>
+        </tr>
+
+    </table>
+</section>
+
+
+</body>
+</html>

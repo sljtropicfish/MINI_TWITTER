@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{AdminLayout}">
+<head>
+    <title>Friendships</title>
+</head>
+<body>
+<section layout:fragment="content">
+    <h3>Friendships</h3>
+    <table>
+        <tr>
+            <th>Follower ID</th>
+            <th>Followee ID</th>
+        </tr>
+        <tr th:each="friendship:${friendships}">
+            <td th:text="${friendship.id.followerId}"></td>
+            <td th:text="${friendship.id.followeeId}"></td>
+        </tr>
+
+    </table>
+</section>
+
+</body>
+</html>

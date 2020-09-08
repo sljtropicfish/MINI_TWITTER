@@ -1,0 +1,22 @@
+
+*************insert a new user
+{
+  "firstName": "Lijie",
+  "lastName": "Song"
+}
+{
+  "firstName": "Shiyin",
+  "lastName": "He"
+}
+
+**************inset a friendship
+{
+    "followerId": "3",
+    "followeeId": "4"
+}
+
+**************insert a tweet
+{
+    "userId": 3,
+    "content": "This is Lijie's first tweet"
+}
